@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 
-import { Container } from "./style"
+import { Container } from "./styles"
 
 interface IProps {
     colIndex: number
@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const Block: FC<IProps> = ({ colIndex, rowIndex }) => {
-    return <Container />
+    return <Container></Container>
 }
 
 export default Block
