@@ -4,6 +4,8 @@
 
 A fully fucntional sodoku app created using TypeScript, React, and Redux. The motivation for this project was to learn more about backtracking algorithms and NP-Completeness.
 
+![](https://i.imgur.com/hPd7Huq.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
