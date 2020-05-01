@@ -12,21 +12,25 @@ interface IProps {
 
 interface IState {
     value: N
+    isActive: boolean
 }
 
 const Block: FC<IProps> = ({ colIndex, rowIndex }) => {
-    const state = useSelector<IReducer, IState>(({ grid }) => ({
+    const state = useSelector<IReducer, IState>(({ grid, selectedBlock }) => ({
+        isActive: selectedBlock
+            ? selectedBlock[0] === rowIndex && selectedBlock[1] === colIndex
+            : false,
         value: grid ? grid[rowIndex][colIndex] : 0,
     }))
 
     const dispatch = useDispatch<Dispatch<AnyAction>>()
 
     const handleClick = () => {
-        dispatch(selectBlock([rowIndex, colIndex]))
+        if (!state.isActive) dispatch(selectBlock([rowIndex, colIndex]))
     }
 
     return (
-        <Container onClick={handleClick}>
+        <Container active={state.isActive} onClick={handleClick}>
             {state.value === 0 ? "" : state.value}
         </Container>
     )
