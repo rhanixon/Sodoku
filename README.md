@@ -2,7 +2,7 @@
 
 ![](https://i.imgur.com/23HTP0O.png)
 
-A fully fucntional sodoku app created using TypeScript, React, and Redux. The motivation for this project was to learn more about backtracking algorithms and NP-Completeness.
+A fully functional mobile friendly progressive web app to play sodoku created using TypeScript, React, and Redux. The motivation for this project was to learn more about backtracking algorithms and NP-Completeness.
 
 ![](https://i.imgur.com/hPd7Huq.png)
 

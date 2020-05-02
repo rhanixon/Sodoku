@@ -1,5 +1,4 @@
 import { GRID } from "typings"
-import { findAllByTestId } from "@testing-library/react"
 
 /**
  * a function to check if a grdi is full

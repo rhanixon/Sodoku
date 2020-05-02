@@ -17,12 +17,13 @@ interface IState {
 
 const Grid: FC = () => {
     const state = useSelector<IReducer, IState>(
-        ({ selectedBlock, workingGrid }) => ({
+        ({ selectedBlock, solvedGrid, workingGrid }) => ({
             selectedBlock,
             selectedValue:
                 workingGrid && selectedBlock
                     ? workingGrid[selectedBlock[0]][selectedBlock[1]]
                     : 0,
+            solvedGrid,
         })
     )
 
@@ -95,8 +96,8 @@ const Grid: FC = () => {
     useMouseTrap("right", moveRight)
 
     useEffect(() => {
-        create()
-    }, [create])
+        if (!state.solvedGrid) create()
+    }, [create, state.solvedGrid])
 
     return (
         <Container>

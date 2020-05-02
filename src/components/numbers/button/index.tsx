@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { AnyAction, Dispatch } from "redux"
 
 import { Button } from "components"
-import { fillBlock, IReducer, selectBlock } from "reducers"
+import { fillBlock, IReducer } from "reducers"
 import { NUMBERS, N, BLOCK_COORDS } from "typings"
-import { stat } from "fs"
 
 interface IProps {
     value: NUMBERS
