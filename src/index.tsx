@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import { Provider } from "react-redux"
 import { ThemeProvider } from "styled-components"
 
-import { Content, Title, Card, Grid } from "components"
+import { Card, Content, Grid, Numbers, Title, NewButton } from "components"
 import { configureStore, unregister } from "core"
 import { GlobalStyles, theme } from "styles"
 
@@ -16,7 +16,9 @@ ReactDOM.render(
             <Content>
                 <Title>Sodoku</Title>
                 <Card>
+                    <NewButton />
                     <Grid />
+                    <Numbers />
                 </Card>
             </Content>
         </Provider>
