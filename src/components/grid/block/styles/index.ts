@@ -8,7 +8,11 @@ interface IProps {
 export const Container = styled.div<IProps>`
     ${({ active, puzzle, theme }) => css`
         align-items: center;
-        background-color: ${active ? theme.colors.blue : theme.colors.white};
+        background-color: ${active
+            ? theme.colors.blue
+            : puzzle
+            ? theme.colors.grey
+            : theme.colors.white};
         border: solid 1px ${theme.colors.black};
         cursor: pointer;
         display: flex;
