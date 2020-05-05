@@ -6,7 +6,15 @@ import { ThemeProvider } from "styled-components"
 import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
-import { Card, Content, Grid, Numbers, Title, NewButton } from "components"
+import {
+    Card,
+    Content,
+    Grid,
+    Numbers,
+    Title,
+    NewButton,
+    RulesButton,
+} from "components"
 import { configureStore, register } from "core"
 import { GlobalStyles, theme } from "styles"
 
@@ -25,6 +33,7 @@ ReactDOM.render(
                         <NewButton />
                         <Grid />
                         <Numbers />
+                        <RulesButton />
                     </Card>
                 </Content>
             </Provider>
