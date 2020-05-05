@@ -1,4 +1,6 @@
 import { AnyAction } from "redux"
+import { toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 import { createFullGrid, removeNumbers, copyGrid, compareArrays } from "utils"
 import { IReducer } from "./interfaces"
 import * as types from "./types"
@@ -27,13 +29,13 @@ const reducer = (state = initialState, action: AnyAction): IReducer => {
                     state.solvedGrid[action.coords[0]][action.coords[1]] !==
                     action.value
                 ) {
-                    alert("Incorect Option")
+                    toast("Incorect Option", { autoClose: 2000 })
                     return state
                 }
                 state.workingGrid[action.coords[0]][action.coords[1]] =
                     action.value
                 if (compareArrays(state.workingGrid, state.solvedGrid))
-                    alert("Complete")
+                    toast("Congrats!")
                 return { ...state, workingGrid: [...state.workingGrid] as GRID }
             }
             return state
